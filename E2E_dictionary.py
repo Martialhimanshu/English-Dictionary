@@ -6,7 +6,7 @@ def dictionary(word):
     if word in data:
         return data[word]
     elif len(get_close_matches(word,data.keys()))>0:
-        response=input("Did you mean %s instead? If yes enter Y else N for no: "% get_close_matches(word,data.keys())[0])
+        response=input("Did you mean" +%s+" instead? If yes enter Y else N for no: "% get_close_matches(word,data.keys())[0])
         if response =='Y' or response =='y':
             return data[get_close_matches(word,data.keys())[0]]
         elif response == 'N'or response == 'n':
